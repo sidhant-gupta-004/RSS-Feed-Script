@@ -10,7 +10,7 @@ bso = BeautifulSoup(html, "html.parser")
 table = bso.findAll("table",{"class":"table-striped"})[0] #table class is table-striped. finds everything with it
 rows = table.findAll("tr")
 
-with open("calendar.json", 'w') as f:
+with open("calender.json", 'w') as f:
 
     table  = [ [cell.get_text() for cell in row.findAll(['td','th'])] for row in rows ]
 
